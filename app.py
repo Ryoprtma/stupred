@@ -6,7 +6,7 @@ import xgboost  # pastikan xgboost ter‑install
 # ------------------------------------------------------------------
 # KONSTANTA GLOBAL
 # ------------------------------------------------------------------
-TINGGI_MEAN = 86.0  # cm – rata² tinggi balita pada data training
+TINGGI_MEAN = 86.0  # cm – rata² tinggi balita pada data training
 
 # ------------------------------------------------------------------
 # LOAD MODEL
@@ -26,8 +26,8 @@ else:
         "Tinggi di atas rata-rata",
     ]
     st.info(
-        "Model tidak punya feature_names_in_. "
-        "Menggunakan urutan fitur hard‑coded; pastikan sudah benar."
+        "Model tidak punya `feature_names_in_`. "
+        "Menggunakan urutan fitur hard‑coded; pastikan sudah benar."
     )
 
 # ------------------------------------------------------------------
@@ -61,7 +61,7 @@ if st.button("Prediksi"):
     pred = model.predict(X)[0]
     proba = model.predict_proba(X)[0]
 
-    label_map = {0: "Severely Stunting", 1: "Stunting", 2: "Normal", 3: "Tinggi"}
-    st.success(f"{label_map.get(pred, f'Kelas {pred}')}")
+    label_map = {0: "Severely Stunting", 1: "Stunting", 2: "Normal", 3: "Tinggi"}
+    st.success(f"**{label_map.get(pred, f'Kelas {pred}')}**")
 
-    st.write({label_map.get(i, f"Kelas {i}"): f"{p*100:.2f}%" for i, p in enumerate(proba)})
+    st.write({label_map.get(i, f"Kelas {i}"): f"{p*100:.2f}%" for i, p in enumerate(proba)})
