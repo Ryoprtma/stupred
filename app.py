@@ -6,6 +6,7 @@ import pickle
 # Load model dan komponen terkait
 
 model = pickle.load(open('model_xgboost1.pkl', 'rb'))
+tinggi_mean = 86.0
 
 
 # Judul aplikasi
