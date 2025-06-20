@@ -130,13 +130,13 @@ with st.container():
 
     with col2:
         jk_text = st.selectbox("Jenis Kelamin", ["Laki-laki", "Perempuan"], help="Pilih jenis kelamin balita.")
-        tinggi = st.number_input("Tinggi Badan (cm)", 30.0, 120.0, 80.0, 0.1, help="Tinggi badan balita dalam centimeter.")
+        tinggi = st.number_input("Tinggi Badan (cm)",20.0, 30.0, 120.0, 80.0, 0.1, help="Tinggi badan balita dalam centimeter.")
 
 st.markdown("---")
 
 # --- PREDICTION ---
 if st.button("Prediksi Status Gizi"):
-    if umur == 0 and berat == 2.0 and tinggi == 30.0:
+    if umur == 0 and berat == 2.0 and tinggi == 20.0:
         st.warning("Mohon masukkan data balita yang valid untuk prediksi.")
     else:
         jk_num = 1 if jk_text == "Laki-laki" else 0
