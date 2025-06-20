@@ -170,10 +170,10 @@ if st.button("Prediksi Status Gizi"):
             proba_data = {label_map.get(i, f"Kelas {i}"): f"{p*100:.2f}%" for i, p in enumerate(proba)}
             st.json(proba_data) # Use st.json for better display of dictionary
 
-            st.info("Prediksi ini didasarkan pada model Machine Learning. Selalu konsultasikan dengan tenaga medis profesional untuk diagnosis dan saran lebih lanjut.")
+            st.info("Prediksi ini didasarkan pada model Machine Learning dan dataset yang telah kami training.")
 
         except Exception as e:
             st.error(f"Terjadi kesalahan saat melakukan prediksi: {e}")
 
 st.markdown("---")
-st.caption("Aplikasi ini dibuat untuk tujuan edukasi dan informasi. Jangan digunakan sebagai pengganti nasihat medis profesional.")
+st.caption("Aplikasi ini dibuat untuk tujuan edukasi dan informasi.")
