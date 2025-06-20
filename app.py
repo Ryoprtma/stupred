@@ -80,9 +80,13 @@ st.markdown(
         margin-top: 30px;
         padding: 20px;
         border-radius: 15px;
-        background-color: #EBF5FB;
+        background-color: #EBF5FB; /* Latar belakang tetap */
         border: 2px solid #A9CCE3;
+        color: #000000; /* UBAH INI ke hitam untuk teks umum di dalam kotak */
         box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    }
+    .prediction-result span { /* Teks hasil prediksi spesifik (misal: "Stunting") */
+        color: #000000; /* UBAH INI juga ke hitam agar hasil utama terlihat jelas */
     }
     .stAlert {
         border-radius: 10px;
@@ -156,12 +160,16 @@ if st.button("Prediksi Status Gizi"):
             label_map = {0: "Severely Stunting", 1: "Stunting", 2: "Normal", 3: "Tinggi"}
             prediction_label = label_map.get(pred, f'Kelas {pred}')
 
-            st.markdown(f"<div class='prediction-result'>Status Gizi: <br> <span>{prediction_label}</span></div>", unsafe_allow_html=True)
+            # Pastikan teks hasil prediksi terlihat jelas
+            st.markdown(
+                f"<div class='prediction-result'>Status Gizi: <br> <span>{prediction_label}</span></div>",
+                unsafe_allow_html=True
+            )
 
             st.subheader("Detail Probabilitas:")
             proba_data = {label_map.get(i, f"Kelas {i}"): f"{p*100:.2f}%" for i, p in enumerate(proba)}
             st.json(proba_data) # Use st.json for better display of dictionary
-            
+
             st.info("Prediksi ini didasarkan pada model Machine Learning. Selalu konsultasikan dengan tenaga medis profesional untuk diagnosis dan saran lebih lanjut.")
 
         except Exception as e:
