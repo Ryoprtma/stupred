@@ -54,7 +54,7 @@ st.markdown(
     }
     .stButton>button {
         background-color: #28B463;
-        color: white;
+        color: black;
         font-size: 1.2em;
         padding: 10px 20px;
         border-radius: 10px;
@@ -114,7 +114,7 @@ st.markdown(
 
 st.markdown("<h1 class='main-header'>👶 Prediksi Stunting pada Balita 👶</h1>", unsafe_allow_html=True)
 st.write(
-    "Aplikasi ini membantu memprediksi status gizi balita (stunting/normal) berdasarkan data antropometri."
+    "Aplikasi ini membantu memprediksi status gizi balita (stunting/normal/tinggi/serverely stunting) berdasarkan data antropometri."
 )
 
 st.markdown("---")
