@@ -4,8 +4,8 @@ Proyek ini bertujuan untuk memprediksi status gizi balita berdasarkan data umur,
 Model yang digunakan adalah Extreme Gradient Boosting (XGBoost) yang dioptimasi menggunakan Bayesian Optimization (Optuna) untuk memperoleh performa terbaik.
 
 Tujuan
-Mengetahui tingkat akurasi serta kemampuan algoritma Extreme Gradient Boosting (XGBoost) dalam melakukan prediksi status stunting pada anak balita berdasarkan data antropometri.
-Menganalisis kontribusi Bayesian Optimization dan teknik SMOTE dalam meningkatkan akurasi, kestabilan, serta kualitas performa model XGBoost pada kondisi data yang tidak seimbang.
+1. Mengetahui tingkat akurasi serta kemampuan algoritma Extreme Gradient Boosting (XGBoost) dalam melakukan prediksi status stunting pada anak balita berdasarkan data antropometri.
+2. Menganalisis kontribusi Bayesian Optimization dan teknik SMOTE dalam meningkatkan akurasi, kestabilan, serta kualitas performa model XGBoost pada kondisi data yang tidak seimbang.
 
 Dataset
 Dataset diperoleh dari Kaggle https://www.kaggle.com/datasets/rendiputra/stunting-balita-detection-121k-rows/code dengan atribut utama:
